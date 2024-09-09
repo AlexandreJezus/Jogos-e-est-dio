@@ -3,7 +3,7 @@ const jogo_controller = require("../controllers/jogo_controllers.js");
 const jogo_router = express.Router();
 
 jogo_router.get("/", (req, res) => {
-  res.json(jogo_controller.index());
+  res.json(jogo_controller.index(req.query));
 });
 
 jogo_router.get("/:id", (req, res) => {

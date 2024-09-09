@@ -3,7 +3,7 @@ const publicadora_controller = require("../controllers/publicadora_controllers.j
 const publicadora_router = express.Router();
 
 publicadora_router.get("/", (req, res) => {
-  res.json(publicadora_controller.index());
+  res.json(publicadora_controller.index(req.query));
 });
 
 publicadora_router.get("/:id", (req, res) => {
