@@ -3,7 +3,7 @@ const genero_controller = require("../controllers/genero_controllers.js");
 const genero_router = express.Router();
 
 genero_router.get("/", (req, res) => {
-  res.json(genero_controller.index());
+  res.json(genero_controller.index(req.query));
 });
 
 genero_router.get("/:id", (req, res) => {

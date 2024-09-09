@@ -3,7 +3,7 @@ const estudio_controller = require("../controllers/estudio_controllers.js");
 const estudio_router = express.Router();
 
 estudio_router.get("/", (req, res) => {
-  res.json(estudio_controller.index());
+  res.json(estudio_controller.index(req.query));
 });
 
 estudio_router.get("/:id", (req, res) => {

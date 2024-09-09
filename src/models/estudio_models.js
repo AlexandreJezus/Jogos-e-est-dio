@@ -1,18 +1,11 @@
 let nextID = 1;
 
 const model = (estudio, id_estudio = nextID++) => {
-  if (
-    estudio.nome != undefined &&
-    estudio.nome != "" &&
-    estudio.criado_em != undefined &&
-    estudio.criado_em != "" &&
-    estudio.atualizado_em != undefined &&
-    estudio.atualizado_em != ""
-  ) {
+  if (estudio.nome != undefined && estudio.nome != "") {
     return {
       id_estudio,
       nome: estudio.nome,
-      criado_em: new Date(),
+      criado_em: estudio.criado_em || new Date(),
       atualizado_em: new Date(),
     };
   }
